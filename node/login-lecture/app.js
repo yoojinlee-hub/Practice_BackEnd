@@ -1,31 +1,47 @@
-const http = require("http");
-const app = http.createServer((req,res)=>{
-    if(req.url === '/'){
-        res.end("여기는 루트입니다");
-    }else if(req.url === '/login'){
-        res.end("여기는 login 화면 입니다");
-    }
+const express = require("express");
+const app = express();
+
+app.get("/", (req, res) => {
+    //기능
+    res.send(`
+    <!DOCTYPE html>
+    <html lang="ko">
+    <head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+</head>
+<body>
+<input type="text" placeholder="id"><br>
+<input type="text"placeholder="pw"><br>
+<button>login</button>
+</body>
+</html>
+`)
 });
 
-app.listen(3001, () =>{
-    console.log("http로 가동된 서버입니다");
+app.get("/login", (req, res) => {
+    //기능
+    res.send(`
+        <!DOCTYPE html>
+        <html lang="ko">
+        <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    </head>
+<body>
+    <input type="text" placeholder="id"><br>
+    <input type="text"placeholder="pw"><br>
+    <button>login</button>
+</body>
+</html>
+    `)
 });
 
 
-// const express = require("express");
-// const app = express();
-
-// app.get("/",(req, res)=>{
-//  //기능
-//  res.send("여기는 루트입니다")
-// });
-
-// app.get("/login",(req, res)=>{
-//     //기능
-//     res.send("여기는 login 화면입니다")
-//    });
-
-
-// app.listen(3000, function() {
-//     console.log("서버 가동");
-// });
+app.listen(3000, function () {
+    console.log("서버 가동");
+});
