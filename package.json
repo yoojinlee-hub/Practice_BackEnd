@@ -1,0 +1,19 @@
+{
+  "name": "login-lecture",
+  "version": "1.0.0",
+  "description": "* node version: v16.17.1\r * first practice : file node (https://youtube.com/playlist?list=PLSK4WsJ8JS4cQ-niGNum4bkK_THHOizTs)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yoojinlee-hub/Practice_BackEnd.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yoojinlee-hub/Practice_BackEnd/issues"
+  },
+  "homepage": "https://github.com/yoojinlee-hub/Practice_BackEnd#readme"
+}
